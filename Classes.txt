@@ -1,0 +1,67 @@
+POJO
+====
+
+User
+
+Coffee
+
+Order
+-----
+    Associated with User
+    Associated with OrderItem(s)
+
+OrderItem
+---------
+    Associated with Coffee
+
+DAO
+===
+
+UserDAO
+-------
+getAll() : array<User>
+get(int id) : User
+update(User)()
+delete(User)
+add(User)
+
+CoffeeDAO
+---------
+getAll() : array<Coffee>
+get(int i) : Coffee
+update(Coffee)
+delete(Coffee))
+add(Coffee)
+
+OrderDAO
+--------
+getAll() : array<Order>
+get(int id) : Order
+update(Order)
+delete(Order)
+add(Order)
+
+OrderItemDAO
+------------
+getAllOrderItems()
+getOrderItems(int id)
+updateOrderItem(OrderItem)
+deleteOrderItem(OrderItem)
+addOrderItem(OrderItem)
+
+DAO Implemenatations
+====================
+
+UserDAOMySQL
+    Utilizes Users table
+
+CoffeeDAOMySQL
+    Utilizes Coffee table
+
+OrderDAOMySQL
+    Utilizes Order table
+    Utilizes User table
+    Utilizes OrderItem table
+
+OrderItemMySQL
+    Utilizes Coffee
